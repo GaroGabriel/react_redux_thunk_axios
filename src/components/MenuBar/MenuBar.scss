@@ -1,0 +1,30 @@
+@import "./src/scss_var/variables";
+
+.menu {
+  min-height: 100vh;
+  background: $black;
+  color: $white;
+
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  &__item {
+    padding: 10px 30px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+
+    &-active {
+      background: $black-hover;
+    }
+
+    &:hover {
+      background: $black-hover;
+    }
+  }
+}
