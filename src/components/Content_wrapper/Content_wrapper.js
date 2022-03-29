@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Content_wrapper.scss'
-import {Posts,Comments} from "../index";
+import {Posts, Comments, Albums, Photos, Todos, Users} from "../index";
 import {useDispatch, useSelector} from "react-redux";
 import {getPosts} from "../../_redux/axios/axios_action";
 
@@ -26,6 +26,14 @@ const ContentWrapper = () => {
                 return (<Posts posts={state.data}/>)
             case "Comments":
                 return (<Comments comments={state.data}/>)
+            case "Albums":
+                return (<Albums albums={state.data}/>)
+            case "Photos":
+                return (<Photos photos={state.data}/>)
+            case "Todos":
+                return (<Todos todos={state.data}/>)
+            case "Users":
+                return (<Users users={state.data}/>)
             default:
                 return (<Posts posts={state.data}/>)
         }
